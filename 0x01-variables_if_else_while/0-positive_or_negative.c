@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-/* more headers go there */
-/* betty style doc for function main goes there */
+/**
+* main - main function to generate random number
+*
+* Return: Always 0 (Success)
+*
+*/
 
 int main(void)
 {
