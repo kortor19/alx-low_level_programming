@@ -1,43 +1,38 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - program that prints all possible
+ * main - a program that prints all possible combinations
  *
- * Return: Always 0 (Success)
+ * Return: Always  0 (Success)
  */
-
 int main(void)
 {
-	int digit1 = 0;
-	int digit2, digit3;
+	int d, p, q;
 
-	while (digit1 <= 9)
+	for (d = '0'; d < '9'; d++)
 	{
-		digit2 = 0;
-		while (digit2 <= 9)
+		for (p = d + 1; p <= '9'; p++)
 		{
-			digit3 = 0;
-			while (digit3 <= 9)
+			for (q = p + 1; q <= '9'; q++)
 			{
-				if (digit1 != digit2 && digit1 < digit2 && digit2 != digit3 &&  digit2 < digit3)
+				if ((p != d) != q)
 				{
-					putchar(digit1 + 48);
-					putchar(digit2 + 48);
-					putchar(digit3 + 48);
+					putchar(d);
+					putchar(p);
+					putchar(q);
 
-					if (digit1 + digit2 + digit3 != 24)
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					if (d == '7' && p == '8')
+						continue;
+					putchar(',');
+					putchar(' ');
 				}
-				++digit3;
 			}
-			++digit2;
 		}
-		++digit1;
 	}
 	putchar('\n');
 
 	return (0);
 }
+
