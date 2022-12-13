@@ -1,40 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - program that prints all single digit numbers
+ * main - program that print all single digits
  *
- * Return: Always 0 (SUccess)
+ * Return: Aways 0 (Success)
  */
 
 int main(void)
 {
-	int firstDigit = 0, secondDigit;
+	int digit = 0;
 
-	while (firstDigit <= 99)
+	while (digit <= 9)
 	{
-		secondDigit = firstDigit;
-		while (secondDigit <= 99)
-		{
-			if (secondDigit != firstDigit)
-			{
-				putchar((firstDigit / 10) + 48);
-				putchar((firstDigit % 10) + 48);
-				putchar(' ');
-				putchar((secondDigit / 10) + 48);
-				putchar((secondDigit % 10) + 48);
-
-				if (firstDigit != 98 || secondDigit != 99)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
-			+secondDigit;
-		}
-		++firstDigit;
+		printf("%i", digit);
+		++digit;
 	}
-
-	putchar('\n');
+	printf("\n");
 
 	return (0);
 }
