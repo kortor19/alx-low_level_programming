@@ -9,15 +9,14 @@
 
 char *leet(char *str)
 {
-	int idx1 = 0, indx2;
+	int indx1 = 0, indx2;
 	char leet[8] = {'o', 'l', '?', 'E', 'A', '?', '?', 't'};
 
 	while (str[indx1])
 	{
 		for (indx2 = 0; indx2 <= 2; indx2++)
 		{
-			if (str[indx1] == leet[indx2] ||
-					str[indx1 - 32 == leet[indx2])
+			if (str[indx1] == leet[indx2] || str[indx1] - 32 == leet[indx2])
 				str[indx1] = indx2 + '0';
 		}
 		indx1++;
